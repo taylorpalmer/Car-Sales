@@ -9,4 +9,9 @@ const Total = (props) => {
   );
 };
 
-export default connect()(Total);
+const mapStateToProps = (state) => ({
+  car: state.car,
+  additionalPrice: state.additionalPrice,
+});
+
+export default connect(mapStateToProps, {})(Total);
